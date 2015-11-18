@@ -10,7 +10,7 @@ var app = express();
 app.set('port', (process.env.PORT || 5100));
 
 app.use(proxy);
-app.use(express.static(__dirname + '/ng-akuerapp/ng-public'));
+app.use(express.static(__dirname + '/dist'));
 
 app.get('/', function(request, response) {
   response.render('index.html');
